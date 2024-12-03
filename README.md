@@ -11,7 +11,7 @@ this variable should contain correct syntax for the operations the coordinate ha
 after you have an orderofop you should use it as the paramater to the function "processinstruction(orderofop)"
 this of course means the variable does not need to be orderofop it just needs to be passed into this function
 
-syntax:
+# syntax:
 should be a list with each index holding instructions in that order
 
 e.g.
@@ -35,7 +35,7 @@ instructions:
 
 
 
-explanation of instructions:
+# explanation of instructions:
 
 ["moveto",[x,y]]
 moves the current position of the cursor to the given x,y coordinates
@@ -61,7 +61,7 @@ plots a point at a given coordinate (not gonna lie, i used this one so little i 
 
 
 
-examples of using this
+# examples of using this
 
 orderofop=[["moveto",[100,100]],["drawforward",100]]
 processinstruction(orderofop)
