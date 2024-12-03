@@ -3,11 +3,10 @@ import time
 import math
 import random
 mouse=Controller()
-addaxis=True
+addaxis=True #determines if the axis are drawn or not
 plotsize=10
 global angle
 angle=0
-runtime=5
 def plotpoint(x,ps):
     mouse.position=x
     mouse.position=(x[0]+ps,x[1]-ps)
@@ -88,7 +87,7 @@ def processinstruction(orderofop):
                     else:
                         mouse.position=(mouse.position[0],mouse.position[1]+i[1])
             mouse.release(Button.left)
-time.sleep(2)
+time.sleep(2) #time the code waits before starting to draw
 if addaxis:
     mouse.position=(250,500)
     mouse.press(Button.left)
@@ -103,13 +102,15 @@ if addaxis:
     mouse.position=(650,700)
     mouse.release(Button.left) 
 
-
+"""
+uncomment this for many premade order of operations you can use which are designed to be looped through
 
 for cata in range(1,361,5):
-    #orderofop=[["moveto",[cata-400,0]],["setangle",cata/2],["iterate",cata%25,[["addangle",cata/5],["drawforward",20]]]]
+    orderofop=[["moveto",[cata-400,0]],["setangle",cata/2],["iterate",cata%25,[["addangle",cata/5],["drawforward",20]]]]
     #orderofop=[["moveto",[180,50]],["setangle",cata],["iterate",6,[["addangle",cata/6],["drawforward",cata/5]]]]
-    orderofop=[["moveto",[100,50]],["iterate",5,[["drawforward",30],["addangle",cata/5]]]]
+    #orderofop=[["moveto",[100,50]],["iterate",5,[["drawforward",30],["addangle",cata/5]]]]
     #orderofop=[["moveto",[180,50]],["setangle",cata**3],["iterate",5,[["addangle",72],["drawforward",cata/3]]]]
     #orderofop=[["moveto",[0,0]],["drawrandom"]]
     processinstruction(orderofop)
     time.sleep(0.1)
+"""
