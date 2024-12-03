@@ -19,12 +19,21 @@ e.g.
 orderofop=[instruction1,instruction2......] so on
 
 instructions:
+
 ["moveto",[x,y]]
+
 ["setangle",angle]
+
 ["addangle",angle]
+
 ["iterate",number of iterations,[instruction1,instruction2...]]
+
 ["drawforward",numOfPixels]
+
 ["plot",[x,y]]
+
+
+
 
 explanation of instructions:
 
@@ -50,6 +59,8 @@ iterates through a given list of instructions a given number of times
 plots a point at a given coordinate (not gonna lie, i used this one so little i forgot it exsisted)
 
 
+
+
 examples of using this
 
 orderofop=[["moveto",[100,100]],["drawforward",100]]
@@ -58,9 +69,10 @@ processinstruction(orderofop)
 this will draw a strait line going up from coordinates (100,100) for 100 pixels
 
 orderofop=[["moveto",[200,100]],["setangle",270],["drawforward",100]]
+
 processinstruction(orderofop)
 
-this will draw a strait line going from coordinates (200,100) to the right for 100 pixels
+this will draw a strait line going from coordinates (200,100) to the right for 100 pixels (as coordinates go anti-clockwise setting angle to 270 is 90 degrees clockwise and as 0 is strait up this is to the right)
 
 orderofop=[
 ["moveto",[200,-50]],
@@ -70,8 +82,8 @@ orderofop=[
     ["addangle",72]
   ]
 ]
-
 ]
+
 processinstruction(orderofop)
 
 this will draw a pentagon, it moves the cursor to (200,-50) then iterates through the instructions: draw forward 30 pixels, turn 72 degrees (72 degrees is the exterior angle of a regular pentagon)
