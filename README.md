@@ -24,6 +24,7 @@ instructions:
 ["addangle",angle]
 ["iterate",number of iterations,[instruction1,instruction2...]]
 ["drawforward",numOfPixels]
+["plot",[x,y]]
 
 explanation of instructions:
 
@@ -45,6 +46,8 @@ draws to a random point from it's current position in a bounding box around the 
 ["iterate",number of iterations,[instruction1,instruction2...]]
 iterates through a given list of instructions a given number of times
 
+["plot",[x,y]]
+plots a point at a given coordinate (not gonna lie, i used this one so little i forgot it exsisted)
 
 
 examples of using this
